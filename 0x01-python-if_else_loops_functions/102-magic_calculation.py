@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 102-magic_calculation.py
-#Leah M.
+# Leah M.
 
 
 def magic_calculation(a, b, c):
