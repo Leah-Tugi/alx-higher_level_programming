@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 6-print_comb3.py
-# Leah M Mutugi 
+# Leah M Mutugi
 
 """Print all possible different combinations of two digits in ascending order.
 
