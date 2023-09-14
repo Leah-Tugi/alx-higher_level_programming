@@ -1,17 +1,35 @@
 #!/usr/bin/python3
-# 9-add_item.py
-# Leah M.
-"""Add all arguments to a Python list and save them to a file."""
-import sys
+"""
+Module 09-student
 
-if __name__ == "__main__":
-    save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-    load_from_json_file = \
-        __import__('8-load_from_json_file').load_from_json_file
+Contains class Student
+that initializes public instance attributes first_name, last_name, and age,
+and has public method to_json that retrieves its dictionary representation
+"""
 
-    try:
-        items = load_from_json_file("add_item.json")
-    except FileNotFoundError:
-        items = []
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, "add_item.json")
+
+class Student():
+    """
+    Public Attributes:
+        first_name
+        last_name
+        age
+
+    Public Methods:
+        to_json: retrieves its dictionary representation
+    """
+    def __init__(self, first_name, last_name, age):
+        """
+        Initializes student with full name and age
+        """
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self):
+        """
+        Returns dictionary description with simple data structure
+        (list, dictionary, dictionary, string)
+        for JSON serialization of an object
+        """
+        return self.__dict__
