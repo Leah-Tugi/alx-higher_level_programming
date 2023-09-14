@@ -1,17 +1,18 @@
 #!/usr/bin/python3
-# 4-append_write.py
-# Leah M.
-"""Defines a file-appending function."""
+"""
+Module 6-from_json_string
+
+Contains function that returns python data structure from JSON string
+"""
 
 
-def append_write(filename="", text=""):
-    """Appends a string to the end of a UTF8 text file.
-
+def from_json_string(my_str):
+    """Returns python data structure from JSON string
     Args:
-        filename (str): The name of the file to append to.
-        text (str): The string to append to the file.
-    Returns:
-        The number of characters appended.
+        my_str: json string representation
+    Return:
+        python object
     """
-    with open(filename, "a", encoding="utf-8") as f:
-        return f.write(text)
+    import json
+
+    return json.loads(my_str)
